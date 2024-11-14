@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastian Amaya | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="sidebar">
+        <button class="sidebar__button">
+            <img src="assets/imgs/bio-ico.png" alt="Bio Icon" class="sidebar__icon">
+            <span class="sidebar__label">Bio</span>
+        </button>
+        <button class="sidebar__button">
+            <img src="assets/imgs/star-ico.png" alt="Skills Icon" class="sidebar__icon">
+            <span class="sidebar__label">Skills</span>
+        </button>
+        <button class="sidebar__button">
+            <img src="assets/imgs/project-ico.png" alt="Projects Icon" class="sidebar__icon">
+            <span class="sidebar__label">Projects</span>
+        </button>
+    </nav>
+
+    <section class="profile">
+        <div class="profile__image-container">
+            <img src="assets/imgs/profile-pic.png" alt="Profile Picture" class="profile__pic">
+        </div>
+        <div class="profile__header">
+            <h1 class="profile__name">SEBASTIAN AMAYA</h1>
+            <h2 class="profile__role">DEVELOPER</h2>
+        </div>
+    </section>
+
+    <section id="bio-info" class="info-container">
+        <img src="assets/imgs/close-icon.png" alt="Close Bio Info" class="close-icon" onclick="closeContainer('bio-info')">
+        <h3 class="section-title">About Me</h3>
+        <p>I was born on September 17, 2003. I have always been passionate about video games and game development, with a strong interest in technology and programming in general.</p>
+    </section>
+
+    <section id="skills-info" class="info-container">
+        <img src="assets/imgs/close-icon.png" alt="Close Skills Info" class="close-icon" onclick="closeContainer('skills-info')">
+        <h3 class="section-title">Skills</h3>
+        <div class="skills-section">
+            <h2 class="skills-section__title programming-languages">Programming Languages:</h2>
+            <ul class="skills-list">
+                <li>C#</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>SQL</li>
+                <li>PHP</li>
+            </ul>
+        </div>
+        <div class="skills-section">
+            <h2 class="skills-section__title game-engines">Game Engine:</h2>
+            <ul class="game-engines-list">
+                <li>Unity</li>
+                <li>Godot 4</li>
+                <li>Phaser 3</li>
+                <li>Construct</li>
+            </ul>
+        </div>
+        <div class="skills-section">
+            <h2 class="skills-section__title other-tools">Other tools:</h2>
+            <ul class="other-tools-list">
+                <li>Photoshop</li>
+                <li>Gimp</li>
+                <li>Aseprite</li>
+                <li>Davinci Resolve</li>
+                <li>Audacity</li>
+                <li>Figma</li>
+                <li>Git</li>
+                <li>Linux</li>
+            </ul>
+        </div>
+        <img src="assets/imgs/next-ico.png" alt="Next" class="next-ico" onclick="goToNext('skills-info')">
+        <img src="assets/imgs/next-ico.png" alt="Previous" class="prev-ico" onclick="goToPrevious('skills-info')">
+    </section>
+
+    <section id="projects-info" class="info-container">
+        <img src="assets/imgs/close-icon.png" alt="Close Projects Info" class="close-icon" onclick="closeContainer('projects-info')">
+        <h3 class="section-title">Projects</h3>
+        <div class="projects-section">
+            <img src="assets/imgs/Meteormania.png" class="game-image" alt="Meteormania Game Screenshot">
+            <p>A NES-inspired platformer where an otherworldly creature ventures through a chaotic abyss to restore peace. This game combines classic pixel art with intense, atmospheric levels, challenging players to overcome perilous obstacles and powerful foes.</p>
+        </div>
+        <div class="projects-section">
+            <p>Details about developed games, including mechanics and systems used.</p>
+        </div>
+        <div class="projects-section">
+            <p>Details about developed games, including mechanics and systems used.</p>
+        </div>
+        <img src="assets/imgs/next-ico.png" alt="Next" class="next-ico" onclick="goToNext('projects-info')">
+        <img src="assets/imgs/next-ico.png" alt="Previous" class="prev-ico" onclick="goToPrevious('projects-info')">
+    </section>
+
+    <div class="settings-control">
+        <div class="language-switcher">
+            <img src="assets/imgs/language-icon.png" alt="Language Icon" class="lang-icon">
+            <div id="languageMenu" class="language-menu">
+                <button class="language-option" onclick="changeLanguage('en')">EN - English</button>
+                <button class="language-option" onclick="changeLanguage('es')">ES - Español</button>
+            </div>
+        </div>
+    
+        <img src="assets/imgs/volume-ico.png" alt="Sound Icon" class="sound-icon">
+        <div class="volume-menu" id="volumeMenu">
+            <label for="volumeRange">Volume:</label>
+            <input type="range" id="volumeRange" min="0" max="100" value="100">
+        </div>
+    </div>
+
+    <footer class="copyright">
+        <p>© 2024 | Juan Sebastian Amaya Ruiz</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="translation.js"></script>
+    <script src="sfx_control.js"></script>
+</body>
+
+</html>
