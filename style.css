@@ -16,7 +16,7 @@ body {
         linear-gradient(90deg, #9bbb8f 10%, transparent 10%), 
         linear-gradient(#9bbb8f 10%, #A0E0A9 10%);
     background-size: 40px 40px;
-    cursor: url('assets/imgs/cursor.png') 6 6, auto;  
+    cursor: url('assets/imgs/cursor.png') 6 6, auto;
 }
 
 .profile {
@@ -140,6 +140,72 @@ body {
     position: relative;
 }
 
+#contact-info {
+    display: none;
+    background-color: #081308;
+    color: #cbd98b;
+    margin-left: 2rem;
+    padding: 20px;
+    border: 4px solid #9bbc0f;
+    box-shadow: 0 0 0 4px #0f380f, 0 0 0 8px #9bbc0f;
+    border-radius: 8px;
+    text-align: left;
+    width: 400px;
+    height: 430px;
+}
+
+
+.contact-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-icon-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+    image-rendering: pixelated;
+}
+
+.contact-text {
+    font-size: 1rem;
+    color: #081308;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover .contact-icon {
+    transform: scale(1.2);
+}
+
+.contact-link:hover .contact-text {
+    color: #9bbc0f;
+}
+
+.contact-link:hover {
+    transform: translateY(-5px);
+}
+
+
+
 .prev-ico {
     left: 10px;
     transform: scaleX(1);
@@ -197,6 +263,67 @@ body {
 
 #projects-info p {
     font-size: 1em;
+}
+
+.projects-section {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.projects-section {
+    position: relative; 
+    text-align: center;
+    padding: 20px;
+}
+
+.game-image {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 80%; 
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.game-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #9bbc0f; 
+    color: #081308;
+    border: 2px solid #0f380f;
+    font-family: 'Pixer', sans-serif;
+    font-size: 0.9em;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px #0f380f;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-button a {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+.game-button:hover {
+    background-color: #cbd98b; 
+    transform: scale(1.05);
+    box-shadow: 4px 4px #0f380f;
+}
+
+.game-button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.game-button:disabled:hover {
+    background-color: #ccc; 
 }
 
 .close-icon {
@@ -261,7 +388,8 @@ body {
 .next-ico,
 .close-icon,
 .sound-icon,
-.volume-menu input {
+.volume-menu input,
+.contact-icon-image {
     cursor: url('assets/imgs/pointer.png') 6 6, pointer;
 }
 
@@ -318,4 +446,31 @@ body {
 .language-option:hover {
     background-color: #9bbc0f;
     color: #081308;
+}
+
+.download-cv-button {
+    background-color: #9bbc0f;
+    border: 2px solid #0f380f;
+    color: #081308;
+    font-family: 'Pixer', sans-serif;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px #0f380f;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: block;  
+    margin: 0 auto;  
+}
+
+.download-cv-button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.download-cv-button:hover {
+    background-color: #cbd98b;
+    transform: scale(1.05);
+    box-shadow: 4px 4px #0f380f;
 }

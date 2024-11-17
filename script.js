@@ -4,11 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const infoSections = {
         bio: document.getElementById('bio-info'),
         skills: document.getElementById('skills-info'),
-        projects: document.getElementById('projects-info')
+        projects: document.getElementById('projects-info'),
+        contact: document.getElementById('contact-info'), 
     };
 
     if (Math.random() < 0.1) {
-        profilePic.src = 'assets/imgs/profile-pic2.jpg';
+        profilePic.src = 'assets/imgs/profile-pic-2.png';
     }
 
     function displaySection(sectionKey) {
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const selectedSection = infoSections[sectionKey];
         if (selectedSection) {
             selectedSection.style.display = 'block';
-            const pages = selectedSection.querySelectorAll('.skills-section, .projects-section');
+            const pages = selectedSection.querySelectorAll('.bio-section, .skills-section, .projects-section');
             pages.forEach(page => page.style.display = 'none');
             if (pages.length > 0) pages[0].style.display = 'block';
 
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     buttons[0].addEventListener('click', () => displaySection('bio'));
     buttons[1].addEventListener('click', () => displaySection('skills'));
     buttons[2].addEventListener('click', () => displaySection('projects'));
+    buttons[3].addEventListener('click', () => displaySection('contact')); 
 });
 
 function closeContainer(containerId) {
@@ -39,7 +41,7 @@ function closeContainer(containerId) {
 
 function changePage(containerId, direction) {
     const container = document.getElementById(containerId);
-    const pages = container.querySelectorAll('.skills-section, .projects-section');
+    const pages = container.querySelectorAll('.bio-section, .skills-section, .projects-section');
     let currentIndex = Array.from(pages).findIndex(page => page.style.display === 'block');
 
     if (currentIndex === -1) return;

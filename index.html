@@ -22,6 +22,10 @@
             <img src="assets/imgs/project-ico.png" alt="Projects Icon" class="sidebar__icon">
             <span class="sidebar__label">Projects</span>
         </button>
+        <button class="sidebar__button">
+            <img src="assets/imgs/contact-ico.png" alt="Contact Icon" class="sidebar__icon">
+            <span class="sidebar__label">Contact</span>
+        </button>
     </nav>
 
     <section class="profile">
@@ -36,9 +40,29 @@
 
     <section id="bio-info" class="info-container">
         <img src="assets/imgs/close-icon.png" alt="Close Bio Info" class="close-icon" onclick="closeContainer('bio-info')">
-        <h3 class="section-title">About Me</h3>
-        <p>I was born on September 17, 2003. I have always been passionate about video games and game development, with a strong interest in technology and programming in general.</p>
+        
+        <div class="bio-section" id="bio-page-1">
+            <h3 class="section-title">About Me</h3>
+            <p>I was born on September 17, 2003, and since I was young, I've had a great passion for video games and software development. I am currently a Multimedia Engineering student at Universidad San Buenaventura Bogotá, in my eighth semester. I have a deep interest in technology, programming, and creating interactive experiences.</p>
+        </div>
+        
+        <div class="bio-section" id="bio-page-2" style="display: none;">
+            <h3 class="section-title">Education and Career</h3>
+            <ul>
+                <li><strong>High School:</strong> Colegio Pedagógico Dulce María</li>
+                <li><strong>Technical Degree in Software Programming:</strong> SENA (2019-2020)</li>
+                <li><strong>Multimedia Engineering:</strong> Universidad San Buenaventura Bogotá (2021-2025)</li>
+            </ul>
+            <button class="download-cv-button">
+                <a href="assets/docs/CV_Sebastian_Amaya.pdf" download>Download CV</a>
+            </button>
+        </div>
+        
+        <img src="assets/imgs/next-ico.png" alt="Next" class="next-ico" onclick="goToNext('bio-info')">
+        <img src="assets/imgs/next-ico.png" alt="Previous" class="prev-ico" onclick="goToPrevious('bio-info')">
     </section>
+    
+    
 
     <section id="skills-info" class="info-container">
         <img src="assets/imgs/close-icon.png" alt="Close Skills Info" class="close-icon" onclick="closeContainer('skills-info')">
@@ -86,17 +110,48 @@
         <div class="projects-section">
             <img src="assets/imgs/Meteormania.png" class="game-image" alt="Meteormania Game Screenshot">
             <p>A NES-inspired platformer where an otherworldly creature ventures through a chaotic abyss to restore peace. This game combines classic pixel art with intense, atmospheric levels, challenging players to overcome perilous obstacles and powerful foes.</p>
+            <button class="game-button" disabled>In Development</button>
         </div>
         <div class="projects-section">
-            <p>Details about developed games, including mechanics and systems used.</p>
+            <img src="assets/imgs/ProjectPastel.png" class="game-image" alt="Project Pastel Game Screenshot">
+            <p>Project Pastel is a 2D isometric simulation game with a pastel visual style, where players customize their home, engage in mini-games, and enjoy a relaxing day-night cycle to create a unique and decorative space.</p>
+            <button class="game-button" disabled>In Development</button>
         </div>
         <div class="projects-section">
-            <p>Details about developed games, including mechanics and systems used.</p>
+            <img src="assets/imgs/Chessmon.png" class="game-image" alt="Chessmon Game Screenshot">
+            <p>Chessmon Ver Phaser is a tactical RPG prototype inspired by Final Fantasy Tactics. Players collect unique creatures with distinct abilities and engage in strategic, grid-based combat. Built with Phaser, this demo showcases early battle mechanics and evolving tactical gameplay, with ongoing development to expand its features.</p>
+            <button class="game-button">
+                <a href="https://neoswamp.itch.io/chessmon-demo" target="_blank">Play on Itch.io</a>
+            </button>
         </div>
+        
         <img src="assets/imgs/next-ico.png" alt="Next" class="next-ico" onclick="goToNext('projects-info')">
         <img src="assets/imgs/next-ico.png" alt="Previous" class="prev-ico" onclick="goToPrevious('projects-info')">
     </section>
 
+    <section id="contact-info" class="info-container">
+        <img src="assets/imgs/close-icon.png" alt="Close Contact Info" class="close-icon" onclick="closeContainer('contact-info')">
+        <h3 class="section-title">Contact</h3>
+        <p>If you would like to get in touch, feel free to reach out through one of the following methods:</p>
+        <p><strong id="email-label">Email:</strong> neos22944@gmail.com</p>
+        <p><strong id="phone-value">Phone:</strong> 318 6927229</p>
+        <div class="contact-icons">
+            <a href="https://github.com/Swampsito" target="_blank" class="contact-link">
+                <div class="contact-item">
+                    <img src="assets/imgs/github-ico.png" alt="GitHub Icon" class="contact-icon-image">
+                    <span class="contact-text">GitHub</span>
+                </div>
+            </a>
+            <a href="https://neoswamp.itch.io/" target="_blank" class="contact-link">
+                <div class="contact-item">
+                    <img src="assets/imgs/itchio-ico.png" alt="Itch.io Icon" class="contact-icon-image">
+                    <span class="contact-text">Itch.io</span>
+                </div>
+            </a>
+        </div>
+        
+    </section>
+    
     <div class="settings-control">
         <div class="language-switcher">
             <img src="assets/imgs/language-icon.png" alt="Language Icon" class="lang-icon">
