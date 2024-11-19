@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         contact: document.getElementById('contact-info'), 
     };
 
-    if (Math.random() < 0.1) {
+    if (Math.random() < 0.01) {
         profilePic.src = 'assets/imgs/profile-pic-2.png';
     }
 

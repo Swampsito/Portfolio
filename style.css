@@ -474,3 +474,13 @@ body {
     transform: scale(1.05);
     box-shadow: 4px 4px #0f380f;
 }
+
+.game-video {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+    border: 4px solid #9bbc0f;
+    border-radius: 8px;
+    box-shadow: 0 0 0 4px #0f380f, 0 0 0 8px #9bbc0f;
+}

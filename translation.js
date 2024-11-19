@@ -26,7 +26,8 @@ const translations = {
         email: "Email:",
         phone: "Phone:",
         github: "GitHub",
-        itchio: "Itch.io"
+        itchio: "Itch.io",
+        videoDescription: "This video showcases the features and progress of one of my ongoing projects. Explore the development stages and get an inside look at the creative process behind the scenes!"
     },
     es: {
         bio: "Sobre mí",
@@ -55,7 +56,8 @@ const translations = {
         email: "Correo:",
         phone: "Teléfono:",
         github: "GitHub",
-        itchio: "Itch.io"
+        itchio: "Itch.io",
+        videoDescription: "Este video muestra las características y el progreso de uno de mis proyectos en curso. ¡Explora las etapas de desarrollo y descubre el proceso creativo detrás de escena!"
     }
 };
 
@@ -162,12 +164,17 @@ document.addEventListener('DOMContentLoaded', () => {
     
         const projectDescription = document.querySelector('#projects-info p');
         if (projectDescription) projectDescription.textContent = langData.projectDescription;
+
+           // Texto del video
+        const videoText = document.querySelector('.projects-section .video-info');
+        if (videoText) videoText.textContent = langData.videoDescription;
         
         document.querySelectorAll('.projects-section').forEach((section, index) => {
             const projectDescriptions = [
                 langData.projectDescription,
                 langData.projectPastelDescription,
-                langData.projectChessmonDescription
+                langData.projectChessmonDescription,
+                langData.videoDescription
             ];
         
             const projectDescParagraph = section.querySelector('p');
